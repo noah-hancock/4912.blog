@@ -1,6 +1,7 @@
 ---
-import "../styles/global.css";
+import "@styles/global.css";
 ---
+
 
 <html lang="en">
   <head>
@@ -9,9 +10,23 @@ import "../styles/global.css";
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>Astro</title>
+
+    <style>
+      wrapper {
+        display: flex;
+        justify-content: center;
+      }
+
+      article {
+        max-width: 800px;
+      }
+    </style>
   </head>
 
-  <article>
-    <slot/>
-  </article>
+  <wrapper>
+    <article>
+      <!-- <Navbar /> -->
+      <slot/>
+    </article>
+  </wrapper>
 </html>

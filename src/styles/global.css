@@ -7,7 +7,7 @@
 @font-face {
   font-family: "Fantasque";
   src: url(Fantasque/FantasqueSansMNerdFont-Bold.ttf);
-  weight: bold;
+  font-weight: bold;
 }
 
 @font-face {
@@ -19,12 +19,40 @@
 @font-face {
   font-family: "Fantasque";
   src: url(Fantasque/FantasqueSansMNerdFont-BoldItalic.ttf);
-  weight: bold;
+  font-weight: bold;
   font-style: italic;
+}
+
+/* CSS variables. Gruvbox theme + Fantasque */
+:root {
+  --font: "Fantasque";
+  --bg: initial;
+  --text: initial;
 }
 
 /* Apply fonts */
 
 h1, h2, h3, h4, h5, h6, p, ul, li {
-  font-family: Fantasque, sans-serif;
+  font-family: var(--font), sans-serif;
+  color: var(--text);
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+h3 {
+  font-size: 1.3em;
+}
+
+p {
+  font-size: 1.2em;
+}
+
+html {
+  background: var(--bg);
 }
