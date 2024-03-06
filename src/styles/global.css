@@ -1,0 +1,30 @@
+/* Register fonts */
+@font-face {
+  font-family: "Fantasque";
+  src: url(Fantasque/FantasqueSansMNerdFont-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Fantasque";
+  src: url(Fantasque/FantasqueSansMNerdFont-Bold.ttf);
+  weight: bold;
+}
+
+@font-face {
+  font-family: "Fantasque";
+  src: url(Fantasque/FantasqueSansMNerdFont-Italic.ttf);
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Fantasque";
+  src: url(Fantasque/FantasqueSansMNerdFont-BoldItalic.ttf);
+  weight: bold;
+  font-style: italic;
+}
+
+/* Apply fonts */
+
+h1, h2, h3, h4, h5, h6, p, ul, li {
+  font-family: Fantasque, sans-serif;
+}
