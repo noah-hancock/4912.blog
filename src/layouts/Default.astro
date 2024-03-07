@@ -4,24 +4,51 @@ import Navbar from "@components/Navbar.astro";
 const { pageTitle } = Astro.props;
 ---
 
+<script is:inline type="module">
+  var root = document.querySelector(":root");
+  var theme = localStorage.getItem("theme");
+
+  function darkTheme() {
+    root.style.setProperty("--bg", "#282828");
+    root.style.setProperty("--text", "#ebdbb2");
+    root.style.setProperty("--extra", "#cc241d");
+    return "Dark Mode";
+  }
+
+  function lightTheme() {
+    root.style.setProperty("--bg", "#fbf1c7");
+    root.style.setProperty("--text", "#3c3836");
+    root.style.setProperty("--extra", "#cc241d");
+    return "Light Mode";
+  }
+
+  function themeSet() {
+    if (theme == "dark") {
+      darkTheme();
+    } else if (theme == "light") {
+      lightTheme();
+    }
+  }
+
+  window.onpaint = themeSet();
+</script>
+
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
+  <meta charset="utf-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width" />
+  <meta name="generator" content={Astro.generator} />
 
-    <style>
-      wrapper {
-        display: flex;
-        justify-content: center;
-      }
+  <style>
+    wrapper {
+      display: flex;
+      justify-content: center;
+    }
 
-      article {
-        max-width: 800px;
-      }
-    </style>
-  </head>
+    article {
+      max-width: 800px;
+    }
+  </style>
 
   <wrapper>
     <article>
