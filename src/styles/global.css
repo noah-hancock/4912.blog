@@ -26,15 +26,25 @@
 /* CSS variables. Gruvbox theme + Fantasque */
 :root {
   --font: "Fantasque";
-  --bg: initial;
-  --text: initial;
+  --bg: #282828;
+  --text: #ebdbb2;
+  --extra: #cc241d;
 }
 
 /* Apply fonts */
 
-h1, h2, h3, h4, h5, h6, p, ul, li {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li {
   font-family: var(--font), sans-serif;
   color: var(--text);
+  line-height: 1.5rem;
 }
 
 h1 {

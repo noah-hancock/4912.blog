@@ -4,4 +4,14 @@ const { pageTitle } = Astro.props;
 const blogName = "cherries";
 ---
 
+<script is:inline>
+  var root = document.querySelector(":root");
+
+  window.addEventListener("load", (event) => {
+    console.log("Page has loaded");
+    // Change the color later
+    root.style.setProperty("--bg", "red");
+  });
+</script>
+
 <title>{pageTitle} - {blogName}</title>
