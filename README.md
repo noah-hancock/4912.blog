@@ -1,2 +1,2 @@
-# My Blog Widget
+# My Blog
 *No name yet*
