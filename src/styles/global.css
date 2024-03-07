@@ -49,25 +49,43 @@ ul,
 li {
   font-family: var(--font), sans-serif;
   color: var(--text);
-  line-height: 1.5rem;
 }
+
+/* Typography */
 
 h1 {
   font-size: 2em;
+  margin: 1rem 0 0.5rem 0;
 }
 
 h2 {
   font-size: 1.5em;
+  margin: 1rem 0 0.5rem 0;
 }
 
 h3 {
   font-size: 1.3em;
+  margin: 1rem 0 0.5rem 0;
 }
 
-p {
+p,
+li,
+ol,
+ul {
   font-size: 1.2em;
+  line-height: 1.5rem;
 }
+
+li {
+  margin: 0.5rem 0 0.5rem 4rem;
+}
+
+/* Style */
 
 html {
   background: var(--bg);
+}
+
+article {
+  padding: 1rem;
 }

@@ -9,17 +9,48 @@ const blogName = "cherries";
     width: 100%;
     display: flex;
     list-style: none;
-  }
 
-  nav div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    div {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      align-items: center;
+    }
   }
 
   #name {
     background: var(--text);
-    color: var(--bg) !important;
+    flex: 1;
+
+    p {
+      color: var(--bg) !important;
+      padding: 0.5rem 0.5rem;
+    }
+  }
+
+  #name::after {
+    flex: 1;
+    width: 100%;
+    content: "";
+    display: block;
+    background: repeating-linear-gradient(
+      90deg,
+      var(--bg),
+      var(--bg) 2px,
+      transparent 0,
+      transparent 10px
+    );
+  }
+
+  #links {
+    flex: 1;
+
+    li,
+    ol,
+    ul {
+      margin: 0 1rem;
+    }
   }
 </style>
 
@@ -38,10 +69,9 @@ const blogName = "cherries";
     <div id="name">
       <p>{blogName}</p>
     </div>
-    <div>
-      <li>Home</li>
-      <li>About</li>
-      <li>Archive</li>
+    <div id="links">
+      <li><a>About</a></li>
+      <li><a>Archive</a></li>
     </div>
   </div>
 </nav>
