@@ -47,15 +47,24 @@ const { pageTitle } = Astro.props;
 
     article {
       max-width: 700px;
+      margin: 2rem 0;
+      padding: 2rem 0;
+    }
+
+    wrapper div {
+      max-width: 700px;
     }
   </style>
 
   <wrapper>
-    <article>
-      <Navbar pageTitle={pageTitle} />
-      <slot />
-      <p></p>
-    </article>
+    <div>
+      <nav>
+        <Navbar pageTitle={pageTitle} />
+      </nav>
+      <article>
+        <slot />
+      </article>
+    </div>
   </wrapper>
 
 

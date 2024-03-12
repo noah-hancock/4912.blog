@@ -29,6 +29,7 @@
   --bg: #282828;
   --text: #ebdbb2;
   --extra: #cc241d;
+  --extra2: #b8bb26;
 }
 
 * {
@@ -68,16 +69,22 @@ h3 {
   margin: 1rem 0 0.5rem 0;
 }
 
-p,
-li,
-ol,
-ul {
+p {
   font-size: 1.2em;
   line-height: 1.75rem;
 }
 
 li {
+  font-size: 1.2em;
   margin: 0.5rem 0 0.5rem 4rem;
+}
+
+strong {
+  color: var(--extra);
+}
+
+em {
+  color: var(--extra2);
 }
 
 /* Style */
