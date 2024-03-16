@@ -1,0 +1,40 @@
+<!DOCTYPE html><script type="module">
+  var root = document.querySelector(":root");
+  var theme = localStorage.getItem("theme");
+
+  function darkTheme() {
+    root.style.setProperty("--bg", "#282828");
+    root.style.setProperty("--text", "#ebdbb2");
+    root.style.setProperty("--extra", "#cc241d");
+    return "Dark Mode";
+  }
+
+  function lightTheme() {
+    root.style.setProperty("--bg", "#fbf1c7");
+    root.style.setProperty("--text", "#3c3836");
+    root.style.setProperty("--extra", "#cc241d");
+    return "Light Mode";
+  }
+
+  function themeSet() {
+    if (theme == "dark") {
+      darkTheme();
+    } else if (theme == "light") {
+      lightTheme();
+    }
+  }
+
+  window.onpaint = themeSet();
+</script> <html lang="en" data-astro-cid-jwirc66j> <meta charset="utf-8"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v4.4.9"><style>@font-face{font-family:Fantasque;src:url(/_astro/FantasqueSansMNerdFont-Regular.CE3_xw0V.ttf)}@font-face{font-family:Fantasque;src:url(/_astro/FantasqueSansMNerdFont-Bold.D24itvrj.ttf);font-weight:700}@font-face{font-family:Fantasque;src:url(/_astro/FantasqueSansMNerdFont-Italic.Ciu5YnNY.ttf);font-style:italic}@font-face{font-family:Fantasque;src:url(/_astro/FantasqueSansMNerdFont-BoldItalic.BBoMcVDB.ttf);font-weight:700;font-style:italic}:root{--font: "Fantasque";--bg: #282828;--text: #ebdbb2;--extra: #cc241d}*{margin:0;padding:0}h1,h2,h3,h4,h5,h6,p,ul,li{font-family:var(--font),sans-serif;color:var(--text)}h1{font-size:2em;margin:1rem 0 .5rem}h2{font-size:1.5em;margin:1rem 0 .5rem}h3{font-size:1.3em;margin:1rem 0 .5rem}p,li,ol,ul{font-size:1.2em;line-height:1.5rem}li{margin:.5rem 0 .5rem 4rem}html{background:var(--bg)}article{padding:1rem}nav[data-astro-cid-5blmo7yk]{width:100%;display:flex;list-style:none;div{width:100%;display:flex;justify-content:center;align-items:center}}#name[data-astro-cid-5blmo7yk]{background:var(--text);flex:1;p{color:var(--bg)!important;padding:.5rem}}#name[data-astro-cid-5blmo7yk]:after{flex:1;width:100%;content:"";display:block;background:repeating-linear-gradient(90deg,var(--bg),var(--bg) 2px,transparent 0,transparent 10px)}#links[data-astro-cid-5blmo7yk]{flex:1;li,ol,ul{margin:0 1rem}}wrapper[data-astro-cid-jwirc66j]{display:flex;justify-content:center}article[data-astro-cid-jwirc66j]{max-width:800px}
+</style><wrapper data-astro-cid-jwirc66j> <article data-astro-cid-jwirc66j> <script>
+  window.addEventListener("load", (event) => {
+    if (localStorage.getItem("theme") == null) {
+      localStorage.setItem("theme", "dark");
+    }
+  });
+</script><title>Home - cherries</title><nav data-astro-cid-5blmo7yk> <div data-astro-cid-5blmo7yk> <div id="name" data-astro-cid-5blmo7yk> <p data-astro-cid-5blmo7yk>cherries</p> </div> <div id="links" data-astro-cid-5blmo7yk> <li data-astro-cid-5blmo7yk><a data-astro-cid-5blmo7yk>About</a></li> <li data-astro-cid-5blmo7yk><a data-astro-cid-5blmo7yk>Archive</a></li> </div> </div> </nav>  <h1>This is a header</h1> <h2>This is a header</h2> <h3>This is a header</h3> <p>
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
+    necessitatibus incidunt numquam esse ipsum! Eius aspernatur assumenda
+    facere. Explicabo, pariatur dolorem. Consequuntur debitis nisi vel cum. Aut
+    possimus soluta quod?
+</p> <ul> <li>1</li> <li>2</li> <li>3</li> </ul> <ol> <li>1</li> <li>2</li> <li>3</li> </ol> <p><strong>Test</strong></p>  <p data-astro-cid-jwirc66j></p> </article> </wrapper> </html>
