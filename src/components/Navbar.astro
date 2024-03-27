@@ -1,43 +1,47 @@
 ---
+// INFO: This file contains the Navbar component.
 const { pageTitle } = Astro.props;
 const blogName = "cherries";
 ---
 
 <style>
+  header {
+    margin: 16px 16px 32px 16px;
+  }
+
   nav {
-    width: 100%;
     display: flex;
     list-style: none;
-    flex-direction: column;
-    margin: 2rem 0 1rem 0;
-
-    div {
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      align-items: center;
-    }
+    flex-direction: row;
+    flex-wrap: nowrap;
   }
 
   #name {
     display: flex;
+    flex-grow: 1;
 
     p {
       background: var(--text);
-      color: var(--bg) !important;
+      color: var(--bg);
       padding: 5px 10px;
     }
   }
 
-  #links {
-    display: flex;
-    justify-content: right;
+  #name::after {
+    content: "";
+    display: block;
+    background: var(--bg);
+    background: linear-gradient(90deg, var(--text) 0%, var(--bg) 100%);
+    width: 100%;
+  }
 
-    li,
-    ol,
-    ul {
-      margin: 0 1rem;
+  menu {
+    display: flex;
+    margin-top: 16px;
+
+    li {
+      list-style: none;
+      margin: 0 1rem 0 0;
     }
 
     a {
@@ -56,14 +60,14 @@ const blogName = "cherries";
 
 <title>{pageTitle} - {blogName}</title>
 
-<nav>
-  <div>
+<header>
+  <nav>
     <div id="name">
       <p>{blogName}</p>
     </div>
-    <div id="links">
-      <li><a href="#">About</a></li>
-      <li><a href="#">Archive</a></li>
-    </div>
-  </div>
-</nav>
+  </nav>
+  <menu>
+    <li><a href="#about">About</a></li>
+    <li><a href="#archive">Archive</a></li>
+  </menu>
+</header>

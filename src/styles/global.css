@@ -27,6 +27,7 @@
 :root {
   --font: "Fantasque";
   --bg: #282828;
+  --bg-dark: #1d2021;
   --text: #ebdbb2;
   --extra: #cc241d;
   --extra2: #b8bb26;
@@ -54,24 +55,27 @@ li {
 
 /* Typography */
 
+h1,
+h2,
+h3 {
+  margin: 2rem 0 0.5rem 0;
+}
+
 h1 {
   font-size: 2em;
-  margin: 1rem 0 0.5rem 0;
 }
 
 h2 {
   font-size: 1.5em;
-  margin: 1rem 0 0.5rem 0;
 }
 
 h3 {
   font-size: 1.3em;
-  margin: 1rem 0 0.5rem 0;
 }
 
 p {
   font-size: 1.2em;
-  line-height: 1.75rem;
+  line-height: 2rem;
 }
 
 li {
@@ -87,12 +91,21 @@ em {
   color: var(--extra2);
 }
 
+article {
+  /* HACK: Possible to make this syntax nicer? */
+  padding-top: 16px;
+  margin-top: 16px;
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+}
+
+i {
+  color: var(--text);
+  font-size: 1.5rem;
+}
+
 /* Style */
 
 html {
   background: var(--bg);
-}
-
-article {
-  padding: 1rem;
 }

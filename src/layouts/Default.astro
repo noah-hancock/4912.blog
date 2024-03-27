@@ -1,6 +1,8 @@
 ---
+// INFO: This file contains the default formatting for pages.
 import "@styles/global.css";
 import Navbar from "@components/Navbar.astro";
+import Footer from "@components/Footer.astro";
 const { pageTitle } = Astro.props;
 ---
 
@@ -8,25 +10,28 @@ const { pageTitle } = Astro.props;
   var root = document.querySelector(":root");
   var theme = localStorage.getItem("theme");
 
+  // HACK: `root.style.setProperty` looks funky, but it works. Maybe clean it?
   function darkTheme() {
     root.style.setProperty("--bg", "#282828");
+    root.style.setProperty("--bg-dark", "#1d2021");
     root.style.setProperty("--text", "#ebdbb2");
-    root.style.setProperty("--extra", "#cc241d");
     return "Dark Mode";
   }
 
   function lightTheme() {
     root.style.setProperty("--bg", "#fbf1c7");
+    root.style.setProperty("--bg-dark", "#ebdbb2");
     root.style.setProperty("--text", "#3c3836");
-    root.style.setProperty("--extra", "#cc241d");
     return "Light Mode";
   }
 
   function themeSet() {
     if (theme == "dark") {
       darkTheme();
+      return "Dark Mode";
     } else if (theme == "light") {
       lightTheme();
+      return "Light Mode";
     }
   }
 
@@ -41,33 +46,34 @@ const { pageTitle } = Astro.props;
 
   <style>
     wrapper {
+      min-height: 100vh;
       display: flex;
       justify-content: center;
     }
 
     article {
       max-width: 700px;
-      margin: 2rem 0;
-      padding: 2rem 0;
+      padding: 0 16px;
+      flex-grow: 1;
+      flex-basis: 100%;
     }
 
     wrapper div {
       max-width: 700px;
+      display: flex;
+      flex-direction: column;
     }
   </style>
 
   <wrapper>
     <div>
-      <nav>
-        <Navbar pageTitle={pageTitle} />
-      </nav>
+      <Navbar pageTitle={pageTitle} />
       <article>
         <slot />
-        <li></li>
       </article>
+      <Footer />
     </div>
   </wrapper>
 
 
-</html>
 </html>
