@@ -44,9 +44,6 @@ const { pageTitle } = Astro.props;
 
     article {
       max-width: 800px;
-      /* FIX: This syntax only works for large screens */
-      width: 800px;
-      /* ^^^^^^^^ */
       flex-grow: 1;
       flex-basis: 100%;
     }
@@ -54,6 +51,12 @@ const { pageTitle } = Astro.props;
     wrapper div {
       display: flex;
       flex-direction: column;
+    }
+
+    @media only screen and (min-width: 800px) {
+      article {
+        width: 800px;
+      }
     }
   </style>
 
