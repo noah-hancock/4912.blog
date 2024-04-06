@@ -7,15 +7,37 @@ const recentPosts = await Astro.glob("@posts/*");
 
 <Default pageTitle="Home">
   <h1>Catch up with my recent blogs!</h1>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit iure tenetur
+    iusto fugit tempora ratione dolorem sed aliquid culpa doloremque, fuga
+    aperiam aliquam! Modi quaerat fugiat sequi, quo dignissimos quisquam!
+  </p>
   <ul>
-    <li>1</li>
-    <li>2</li>
-    <li>3</li>
-    <li>4</li>
-    <li>5</li>
-    <li>6</li>
+    <li>lorem</li>
+    <li>lorem</li>
+    <li>lorem</li>
+    <li>lorem</li>
+    <li>lorem</li>
   </ul>
-  <p>Here's a small test with the `p` element!</p>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente labore ad
+    laborum expedita assumenda impedit, accusantium numquam. Harum maiores
+    consequatur, dolorem voluptatum perspiciatis ipsum amet assumenda aliquid
+    non iure quidem.
+  </p>
+  <h2>Lorem</h2>
+  <p>
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem blanditiis
+    repellendus unde aliquid porro illo facilis commodi amet impedit. Possimus
+    saepe eaque deleniti. Quia quam eveniet suscipit excepturi est quasi?
+  </p>
+  <h3>Ipsum</h3>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo delectus
+    harum consequuntur optio quibusdam iusto? Pariatur sit quod nesciunt
+    exercitationem, hic numquam id ipsam iure perferendis, placeat distinctio
+    vero deleniti!
+  </p>
   {
     recentPosts.map((post) => (
       <BlogCardRecent

@@ -96,28 +96,28 @@
   padding: 0;
 }
 
-/* Apply fonts */
-
-/* Colors */
-
 body {
   background: var(--base);
 }
 
-article h1 {
+article h1,
+article h2,
+article h3 {
   font-family: var(--heading);
+  margin: 0 0 0.5rem 0;
+}
+
+article h1 {
   font-size: 2rem;
   color: var(--text);
 }
 
 article h2 {
-  font-family: var(--heading);
   font-size: 1.75rem;
   color: var(--subtext0);
 }
 
 article h3 {
-  font-family: var(--heading);
   font-size: 1.5rem;
   color: var(--subtext1);
 }
@@ -126,10 +126,21 @@ article a,
 article li,
 article p {
   font-family: var(--body);
+  line-height: 1.9rem;
   font-size: 1.2rem;
   color: var(--text);
 }
 
+article ul,
+article ol,
+article p {
+  margin: 0 0 1rem 0;
+}
+
+article li {
+  margin-left: 2rem;
+}
+
 article {
-  padding: 16px 8px;
+  padding: 32px 16px;
 }
