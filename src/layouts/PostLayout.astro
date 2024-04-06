@@ -1,0 +1,8 @@
+---
+const { frontmatter } = Astro.props;
+import Default from "@layouts/Default.astro";
+---
+
+<Default pageTitle={frontmatter.title}>
+  <slot />
+</Default>

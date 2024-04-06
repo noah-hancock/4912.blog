@@ -5,11 +5,8 @@ const blogName = "4912";
 ---
 
 <script is:inline>
-  if (currentTheme == "dark") {
-    themeToggleButton.className = "fa-sun fa-solid";
-  } else {
-  }
-
+  // TODO: Create button icon switcher
+  // Yes, I know you've already tried.
   function switchTheme() {
     const themeToggleButton = document.getElementById("themeToggleButton");
     const html = document.documentElement;
@@ -84,8 +81,8 @@ const blogName = "4912";
     <a href="/">{blogName}</a>
   </div>
   <div id="menu">
-    <li><a href="#about">About</a></li>
-    <li><a href="#archive">Archive</a></li>
+    <li><a href="/about">About</a></li>
+    <li><a href="/archive">Archive</a></li>
     <i id="themeToggleButton" onclick="switchTheme()" class="fa-solid fa-sun"
     ></i>
   </div>

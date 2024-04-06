@@ -1,4 +1,6 @@
 ---
+layout: "@layouts/PostLayout.astro"
+
 title: "This is my first cool blog"
 desc: "This is supposed to be a very long string of text, obviously it won't be added manually in a tag like this one. This is just for testing purposes"
 date: 2024-03-28

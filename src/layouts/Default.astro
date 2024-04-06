@@ -43,13 +43,15 @@ const { pageTitle } = Astro.props;
     }
 
     article {
-      max-width: 700px;
+      max-width: 800px;
+      /* FIX: This syntax only works for large screens */
+      width: 800px;
+      /* ^^^^^^^^ */
       flex-grow: 1;
       flex-basis: 100%;
     }
 
     wrapper div {
-      max-width: 700px;
       display: flex;
       flex-direction: column;
     }

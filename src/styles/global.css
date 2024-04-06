@@ -103,6 +103,7 @@ body {
 article h1,
 article h2,
 article h3 {
+  font-weight: 500;
   font-family: var(--heading);
   margin: 0 0 0.5rem 0;
 }
@@ -134,7 +135,7 @@ article p {
 article ul,
 article ol,
 article p {
-  margin: 0 0 1rem 0;
+  margin: 0 0 2rem 0;
 }
 
 article li {

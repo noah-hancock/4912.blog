@@ -4,52 +4,51 @@ const { title, desc, date, author, tags, url } = Astro.props;
 ---
 
 <style>
-  #cardRecent {
-    margin: 16px 0;
+  cardRecent {
     display: grid;
-    grid-template-columns: auto 25%;
-    background: var(--bg-dark);
-    border-radius: 16px;
-
-    div {
-      margin: 16px;
-    }
-
-    #button {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: var(--text);
-      border-radius: 8px;
-      /* TODO: Change to icon instead of bigger text */
-
-      a {
-        color: var(--bg);
-        text-decoration: none;
-        font-size: 1.5rem;
-      }
-    }
+    background: var(--mantle);
+    padding: 16px;
+    margin: 16px 0;
+    border-radius: 8px;
   }
 
-  @media screen and (max-width: 600px) {
-    #cardRecent {
-      grid-template-columns: auto;
-      grid-template-rows: auto 40%;
+  cardRecent h2 {
+    margin: 0;
+  }
 
-      #button {
-        height: 64px;
-      }
-    }
+  #date {
+    /* TODO: Fix to comply with Catppuccin styling */
+    color: var(--red);
+    margin-bottom: 16px;
+  }
+
+  #body {
+    border-top: 2px solid var(--surface0);
+    margin: 0;
+    padding: 16px 0;
+  }
+
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--surface0);
+    border-radius: 6px;
+    cursor: pointer;
+    min-height: 48px;
+    text-decoration: none;
+  }
+
+  a:hover {
+    background: var(--surface1);
   }
 </style>
 
-<div id="cardRecent">
+<cardRecent>
   <div>
     <h2>{title}</h2>
-    <p><em>{date} - {author}</em></p>
-    <p>{desc}</p>
+    <p id="date"><em>{date} - {author}</em></p>
+    <p id="body">{desc}</p>
   </div>
-  <div id="button">
-    <a href={url}>-></a>
-  </div>
-</div>
+  <a href={url}>-></a>
+</cardRecent>

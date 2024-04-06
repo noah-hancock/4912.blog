@@ -1,0 +1,80 @@
+---
+import Default from "@layouts/Default.astro";
+---
+
+<style>
+  #bars {
+    margin: 16px 0 2rem 0;
+  }
+
+  bar {
+    padding: 8px;
+    margin: 16px 0;
+    display: block;
+    width: 100%;
+    min-height: 32px;
+    background: var(--surface0);
+    border-radius: 8px;
+  }
+
+  bar p {
+    margin: 0 0 8px 0;
+  }
+
+  bar fill {
+    display: block;
+    border-radius: 4px;
+    min-height: 16px;
+    /* TODO: Make gradient. */
+    /* Or replace with GitHub language colors */
+    background: var(--red);
+  }
+</style>
+
+<Default pageTitle="About">
+  <h1>Hi, I'm Noah.</h1>
+  <p>
+    I'm a novice programmer with a love for making websites. I'm planning on
+    working on frameworks in the future, this website may not stay the same for
+    long.
+  </p>
+  <p style="margin-bottom: 0;">
+    Anyway, here's my experience in some programming languages summed up:
+  </p>
+
+  <div id="bars">
+    <bar>
+      <p>HTML</p>
+      <fill style="width: 90%;"></fill>
+    </bar>
+    <bar>
+      <p>CSS</p>
+      <fill style="width: 90%;"></fill>
+    </bar>
+    <bar>
+      <p>Astro</p>
+      <fill style="width: 75%;"></fill>
+    </bar>
+    <bar>
+      <p>Python</p>
+      <fill style="width: 70%;"></fill>
+    </bar>
+    <bar>
+      <p>Luau</p>
+      <fill style="width: 30%;"></fill>
+    </bar>
+    <bar>
+      <p>C#</p>
+      <fill style="width: 10%;"></fill>
+    </bar>
+  </div>
+
+  <h1>What You Will See On My Blog</h1>
+  <ul>
+    <li>Photography</li>
+    <li>IDE Setups/talk (Neovim)</li>
+    <li>Coding Solutions (GitHub, Codeium, etc)</li>
+    <li>Personal Projects</li>
+    <li>Nerdy Stuff</li>
+  </ul>
+</Default>
