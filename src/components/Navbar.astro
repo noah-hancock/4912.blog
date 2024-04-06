@@ -1,73 +1,92 @@
 ---
 // INFO: This file contains the Navbar component.
 const { pageTitle } = Astro.props;
-const blogName = "cherries";
+const blogName = "4912";
 ---
 
+<script is:inline>
+  if (currentTheme == "dark") {
+    themeToggleButton.className = "fa-sun fa-solid";
+  } else {
+  }
+
+  function switchTheme() {
+    const themeToggleButton = document.getElementById("themeToggleButton");
+    const html = document.documentElement;
+
+    // Toggle button logic
+    if (html.classList.contains("dark")) {
+      html.className = "light";
+      localStorage.setItem("theme", "light");
+    } else {
+      html.className = "dark";
+      localStorage.setItem("theme", "dark");
+    }
+  }
+</script>
+
 <style>
-  header {
-    margin: 16px 16px 32px 16px;
+  wrapper {
+    display: flex;
+    padding: 16px;
+    justify-content: space-between;
   }
 
-  nav {
+  wrapper #name {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--heading);
+    padding: 8px;
+    border: 3px solid var(--blue);
+    border-radius: 128px;
+  }
+
+  wrapper #name a {
+    color: var(--blue);
+  }
+
+  wrapper #menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  wrapper #menu li {
     list-style: none;
-    flex-direction: row;
-    flex-wrap: nowrap;
+    font-family: "Inter";
+    margin-right: 8px;
+    color: var(--text);
+    padding: 8px;
+    border: 3px solid var(--blue);
+    border-radius: 128px;
   }
 
-  #name {
-    display: flex;
-    flex-grow: 1;
-
-    p {
-      background: var(--text);
-      color: var(--bg);
-      padding: 5px 10px;
-    }
+  wrapper #menu i {
+    cursor: pointer;
+    color: var(--text);
+    padding: 8px;
+    border: 3px solid var(--blue);
+    border-radius: 128px;
   }
 
-  #name::after {
-    content: "";
-    display: block;
-    background: var(--bg);
-    background: linear-gradient(90deg, var(--text) 0%, var(--bg) 100%);
-    width: 100%;
-  }
-
-  menu {
-    display: flex;
-    margin-top: 16px;
-
-    li {
-      list-style: none;
-      margin: 0 1rem 0 0;
-    }
-
-    a {
-      color: var(--text);
-    }
+  wrapper #menu li a,
+  wrapper #name a {
+    color: var(--blue);
+    text-decoration: none;
   }
 </style>
 
-<script is:inline>
-  window.addEventListener("load", (event) => {
-    if (localStorage.getItem("theme") == null) {
-      localStorage.setItem("theme", "dark");
-    }
-  });
-</script>
-
 <title>{pageTitle} - {blogName}</title>
 
-<header>
-  <nav>
-    <div id="name">
-      <p>{blogName}</p>
-    </div>
-  </nav>
-  <menu>
+<wrapper>
+  <div id="name">
+    <a href="/">{blogName}</a>
+  </div>
+  <div id="menu">
     <li><a href="#about">About</a></li>
     <li><a href="#archive">Archive</a></li>
-  </menu>
-</header>
+    <i id="themeToggleButton" onclick="switchTheme()" class="fa-solid fa-sun"
+    ></i>
+  </div>
+</wrapper>

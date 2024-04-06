@@ -1,4 +1,6 @@
 /* Register fonts */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Space+Grotesk:wght@300..700&display=swap");
+
 @font-face {
   font-family: "Fantasque";
   src: url(Fantasque/FantasqueSansMNerdFont-Regular.ttf);
@@ -23,14 +25,70 @@
   font-style: italic;
 }
 
-/* CSS variables. Gruvbox theme + Fantasque */
+/* CSS variables. */
 :root {
-  --font: "Fantasque";
-  --bg: #282828;
-  --bg-dark: #1d2021;
-  --text: #ebdbb2;
-  --extra: #cc241d;
-  --extra2: #b8bb26;
+  /* Typography */
+  --heading: "Space Grotesk";
+  --body: "Inter";
+  --mono: "Fantasque";
+}
+
+.dark {
+  --rosewater: #f5e0dc;
+  --flamingo: #f2cdcd;
+  --pink: #f5c2e7;
+  --mauve: #cba6f7;
+  --red: #f38ba8;
+  --maroon: #eba0ac;
+  --peach: #fab387;
+  --yellow: #f9e2af;
+  --green: #a6e3a1;
+  --teal: #94e2d5;
+  --sky: #89dceb;
+  --sapphire: #74c7ec;
+  --blue: #89b4fa;
+  --lavender: #b4befe;
+  --text: #cdd6f4;
+  --subtext1: #bac2de;
+  --subtext0: #a6adc8;
+  --overlay2: #9399b2;
+  --overlay1: #7f849c;
+  --overlay0: #6c7086;
+  --surface2: #585b70;
+  --surface1: #45475a;
+  --surface0: #313244;
+  --base: #1e1e2e;
+  --mantle: #181825;
+  --crust: #11111b;
+}
+
+.light {
+  --rosewater: #dc8a78;
+  --flamingo: #dd7878;
+  --pink: #ea76cb;
+  --mauve: #8839ef;
+  --red: #d20f39;
+  --maroon: #e64553;
+  --peach: #fe640b;
+  --yellow: #df8e1d;
+  --green: #40a02b;
+  --teal: #179299;
+  --sky: #04a5e5;
+  --sapphire: #209fb5;
+  --blue: #1e66f5;
+  --lavender: #7287fd;
+  --text: #4c4f69;
+  --subtext1: #5c5f77;
+  --subtext0: #6c6f85;
+  --overlay2: #7c7f93;
+  --overlay1: #8c8fa1;
+  --overlay0: #9ca0b0;
+  --surface2: #acb0be;
+  --surface1: #bcc0cc;
+  --surface0: #ccd0da;
+  --base: #eff1f5;
+  --mantle: #e6e9ef;
+  --crust: #dce0e8;
 }
 
 * {
@@ -40,72 +98,38 @@
 
 /* Apply fonts */
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ul,
-li {
-  font-family: var(--font), sans-serif;
+/* Colors */
+
+body {
+  background: var(--base);
+}
+
+article h1 {
+  font-family: var(--heading);
+  font-size: 2rem;
   color: var(--text);
 }
 
-/* Typography */
-
-h1,
-h2,
-h3 {
-  margin: 2rem 0 0.5rem 0;
+article h2 {
+  font-family: var(--heading);
+  font-size: 1.75rem;
+  color: var(--subtext0);
 }
 
-h1 {
-  font-size: 2em;
+article h3 {
+  font-family: var(--heading);
+  font-size: 1.5rem;
+  color: var(--subtext1);
 }
 
-h2 {
-  font-size: 1.5em;
-}
-
-h3 {
-  font-size: 1.3em;
-}
-
-p {
-  font-size: 1.2em;
-  line-height: 2rem;
-}
-
-li {
-  font-size: 1.2em;
-  margin: 0.5rem 0 0.5rem 4rem;
-}
-
-strong {
-  color: var(--extra);
-}
-
-em {
-  color: var(--extra2);
+article a,
+article li,
+article p {
+  font-family: var(--body);
+  font-size: 1.2rem;
+  color: var(--text);
 }
 
 article {
-  /* HACK: Possible to make this syntax nicer? */
-  padding-top: 16px;
-  margin-top: 16px;
-  padding-bottom: 16px;
-  margin-bottom: 16px;
-}
-
-i {
-  color: var(--text);
-  font-size: 1.5rem;
-}
-
-/* Style */
-
-html {
-  background: var(--bg);
+  padding: 16px 8px;
 }

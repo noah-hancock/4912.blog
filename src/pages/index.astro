@@ -1,31 +1,31 @@
 ---
 import Default from "@layouts/Default.astro";
+import BlogCardRecent from "@components/BlogCardRecent.astro";
+// TODO: Make this only display recent posts.
+const recentPosts = await Astro.glob("@posts/*");
 ---
 
 <Default pageTitle="Home">
-  <h1>This is a header</h1>
-  <p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
-    necessitatibus incidunt numquam esse ipsum! Eius aspernatur assumenda
-    facere. Explicabo, pariatur dolorem. Consequuntur debitis nisi vel cum. Aut
-    possimus soluta quod?
-  </p>
-  <h1>This is a header</h1>
-  <p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
-    necessitatibus incidunt numquam esse ipsum! Eius aspernatur assumenda
-    facere. Explicabo, pariatur dolorem. Consequuntur debitis nisi vel cum. Aut
-    possimus soluta quod?
-  </p>
+  <h1>Catch up with my recent blogs!</h1>
   <ul>
     <li>1</li>
     <li>2</li>
     <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
   </ul>
-  <ol>
-    <li>1</li>
-    <li>2</li>
-    <li>3</li>
-  </ol>
-  <p><strong>Test</strong></p>
+  <p>Here's a small test with the `p` element!</p>
+  {
+    recentPosts.map((post) => (
+      <BlogCardRecent
+        title={post.frontmatter.title}
+        desc={post.frontmatter.desc.slice(0, 120)}
+        date={post.frontmatter.date.toString().slice(0, 10)}
+        author={post.frontmatter.author}
+        tags={post.frontmatter.tags}
+        url={post.url}
+      />
+    ))
+  }
 </Default>

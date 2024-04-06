@@ -1,3 +1,55 @@
 ---
 // INFO: This file contains the recent blogs card component (found on homepage).
+const { title, desc, date, author, tags, url } = Astro.props;
 ---
+
+<style>
+  #cardRecent {
+    margin: 16px 0;
+    display: grid;
+    grid-template-columns: auto 25%;
+    background: var(--bg-dark);
+    border-radius: 16px;
+
+    div {
+      margin: 16px;
+    }
+
+    #button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: var(--text);
+      border-radius: 8px;
+      /* TODO: Change to icon instead of bigger text */
+
+      a {
+        color: var(--bg);
+        text-decoration: none;
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    #cardRecent {
+      grid-template-columns: auto;
+      grid-template-rows: auto 40%;
+
+      #button {
+        height: 64px;
+      }
+    }
+  }
+</style>
+
+<div id="cardRecent">
+  <div>
+    <h2>{title}</h2>
+    <p><em>{date} - {author}</em></p>
+    <p>{desc}</p>
+  </div>
+  <div id="button">
+    <a href={url}>-></a>
+  </div>
+</div>
