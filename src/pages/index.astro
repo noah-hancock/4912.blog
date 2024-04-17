@@ -3,7 +3,7 @@ import Default from "@layouts/Default.astro";
 import BlogCardRecent from "@components/BlogCardRecent.astro";
 // TODO: Make this only display recent posts.
 // TODO: Fix so that it gets all blog posts, no matter what folder
-const recentPosts = await Astro.glob("@posts/*/*/*");
+const recentPosts = await Astro.glob("@posts/*");
 ---
 
 <Default pageTitle="Home">
