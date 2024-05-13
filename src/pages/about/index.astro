@@ -3,6 +3,20 @@ import Default from "@layouts/Default.astro";
 ---
 
 <style>
+  .bio {
+    display: grid;
+    grid-template-columns: 25% auto;
+  }
+
+  .bio div:not(div:first-child) {
+    padding: 0 0 0 16px;
+  }
+
+  .bio img {
+    width: 100%;
+    border-radius: 100%;
+  }
+
   #bars {
     margin: 16px 0 2rem 0;
   }
@@ -28,15 +42,47 @@ import Default from "@layouts/Default.astro";
     /* Or replace with GitHub language colors */
     background: var(--red);
   }
+
+  @media only screen and (max-width: 800px) {
+    .bio {
+      display: grid;
+      grid-template-columns: auto;
+    }
+
+    .bio div:not(div:first-child) {
+      padding: 0;
+    }
+
+    .bio div img {
+      width: 50%;
+      margin: 0 0 32px 0;
+    }
+
+    .bio div:first-child {
+      display: flex;
+      justify-content: center;
+    }
+  }
 </style>
 
 <Default pageTitle="About">
-  <h1>Hi, I'm Noah.</h1>
-  <p>
-    I'm a novice programmer with a love for making websites. I'm planning on
-    working on frameworks in the future, this website may not stay the same for
-    long.
-  </p>
+  <!-- TODO: Add picture next to my name -->
+  <div class="bio">
+    <div>
+      <img
+        src="https://github.com/ch3rries/ch3rries/raw/main/assets/StickersDoodle_cherry_rose.16b7d873.gif?raw=true"
+        alt="Placeholder Image"
+      />
+    </div>
+    <div>
+      <h1>Hi, I'm Noah.</h1>
+      <p>
+        I'm a novice programmer with a love for making websites. I'm planning on
+        working with frameworks in the future, this website may not stay the
+        same for long.
+      </p>
+    </div>
+  </div>
   <p style="margin-bottom: 0;">
     Anyway, here's my experience in some programming languages summed up:
   </p>
