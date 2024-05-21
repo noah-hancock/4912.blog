@@ -146,6 +146,10 @@ article p {
   margin: 0 0 2rem 0;
 }
 
+article ul ul {
+  margin: 0 0 0 2rem;
+}
+
 article li {
   margin-left: 2rem;
 }

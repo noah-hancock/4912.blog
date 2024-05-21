@@ -6,10 +6,18 @@ import Default from "@layouts/Default.astro";
   .bio {
     display: grid;
     grid-template-columns: 25% auto;
+    margin: 0 0 16px 0;
+    flex-direction: column;
   }
 
   .bio div:not(div:first-child) {
-    padding: 0 0 0 16px;
+    position: relative;
+    padding: 16px;
+    margin: 0 0 16px 16px;
+    background: var(--surface0);
+    border-radius: 32px;
+    display: flex;
+    align-items: center;
   }
 
   .bio img {
@@ -26,8 +34,8 @@ import Default from "@layouts/Default.astro";
     margin: 16px 0;
     display: block;
     min-height: 32px;
-    background: var(--surface0);
     border-radius: 8px;
+    border: 2px solid var(--surface0);
   }
 
   bar p {
@@ -36,11 +44,50 @@ import Default from "@layouts/Default.astro";
 
   bar fill {
     display: block;
+
     border-radius: 4px;
     min-height: 16px;
     /* TODO: Make gradient. */
     /* Or replace with GitHub language colors */
-    background: var(--red);
+    background: var(--blue);
+  }
+
+  #socials {
+    margin: 0 0 16px 0;
+  }
+
+  pill {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    border-radius: 8px;
+    margin: 0 0 8px 0;
+    background: var(--surface0);
+  }
+
+  pill i {
+    margin: 0 16px 0 0;
+    padding: 0 16px 0 0;
+    border-right: 2px solid var(--text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text);
+    font-size: 2rem;
+    width: 32px;
+  }
+
+  pill a {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 400;
+    font-style: italic;
+    text-decoration: none;
+  }
+
+  pill a:hover {
+    transition: ease 0.1s;
+    font-weight: 800;
   }
 
   @media only screen and (max-width: 800px) {
@@ -50,23 +97,23 @@ import Default from "@layouts/Default.astro";
     }
 
     .bio div:not(div:first-child) {
-      padding: 0;
+      margin: 0;
     }
 
     .bio div img {
       width: 50%;
       margin: 0 0 32px 0;
+      align-self: center;
     }
 
     .bio div:first-child {
       display: flex;
-      justify-content: center;
+      flex-direction: column;
     }
   }
 </style>
 
 <Default pageTitle="About">
-  <!-- TODO: Add picture next to my name -->
   <div class="bio">
     <div>
       <img
@@ -75,14 +122,66 @@ import Default from "@layouts/Default.astro";
       />
     </div>
     <div>
-      <h1>Hi, I'm Noah.</h1>
-      <p>
-        I'm a novice programmer with a love for making websites. I'm planning on
-        working with frameworks in the future, this website may not stay the
-        same for long.
-      </p>
+      <div>
+        <h1>Hi, I'm Noah.</h1>
+        <p style="margin: 0;">
+          I'm a novice programmer with a love for making websites. Here's my
+          about me, I mean, this is what you're visiting me for - right?
+        </p>
+      </div>
     </div>
   </div>
+
+  <div id="socials">
+    <pill>
+      <i class="fa-brands fa-reddit"></i>
+      <a href="https://reddit.com/u/XSuperOptical">Reddit</a>
+    </pill>
+    <pill>
+      <i class="fa-brands fa-github"></i>
+      <a href="https://github.com/ch3rries">Github</a>
+    </pill>
+    <pill>
+      <i class="fa-brands fa-x-twitter"></i>
+      <a href="https://x.com/cherryponee">X (Twitter)</a>
+    </pill>
+    <pill>
+      <i class="fa-brands fa-discord"></i>
+      <a href="#Thisismydiscordusername!">4912</a>
+    </pill>
+    <pill>
+      <i class="fa-solid fa-envelope"></i>
+      <a href="mailto:mail.noahhancock@gmail.com">Email</a>
+    </pill>
+  </div>
+
+  <h1>About me... In short.</h1>
+  <ul>
+    <li>About me</li>
+    <ul>
+      <li>🎂 March 2nd</li>
+      <li>Male (He/Him)</li>
+      <li>Nicknames: Cherry, Neoko, Noah*, Fox*</li>
+    </ul>
+    <li>Hobbies</li>
+    <ul>
+      <li>Photography</li>
+      <li>Programming</li>
+      <li>Front-end Development</li>
+      <li>Exploring Nature</li>
+      <li>Hiking</li>
+      <li>Biking</li>
+      <li>Skiing</li>
+    </ul>
+    <li>Favorite Things</li>
+    <ul>
+      <li>Color: Pink</li>
+      <li>Food: Pizza</li>
+      <li>Game: Mario Kart Wii (CTGP); Terraria</li>
+    </ul>
+  </ul>
+
+  <!--
   <p style="margin-bottom: 0;">
     Anyway, here's my experience in some programming languages summed up:
   </p>
@@ -122,4 +221,5 @@ import Default from "@layouts/Default.astro";
     <li>Personal Projects</li>
     <li>Nerdy Stuff</li>
   </ul>
+-->
 </Default>
