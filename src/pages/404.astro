@@ -1,0 +1,12 @@
+---
+import Default from "@layouts/Default.astro";
+import BlogCardRecent from "@components/BlogCardRecent.astro";
+// TODO: Make this only display recent posts.
+const recentPosts = await Astro.glob("@posts/*");
+---
+
+<Default pageTitle="Home">
+  <h1>
+    Either this page is under contruction or you wound up in the wrong place...
+  </h1>
+</Default>
