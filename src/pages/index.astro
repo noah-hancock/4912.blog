@@ -1,9 +1,12 @@
 ---
 import Default from "@layouts/Default.astro";
 import BlogCardRecent from "@components/BlogCardRecent.astro";
+import Meta from "@components/Meta.astro";
 // TODO: Make this only display recent posts.
 const recentPosts = await Astro.glob("@posts/*");
 ---
+
+<Meta title="Home" desc="Check out my recent blogs our browse my webpage." />
 
 <Default pageTitle="Home">
   <h1 style="text-align: center; margin-bottom: 2rem;">

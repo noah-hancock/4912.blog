@@ -1,6 +1,13 @@
 ---
 import Default from "@layouts/Default.astro";
+import Meta from "@components/Meta.astro";
 ---
+
+<Meta
+  title="My About Me"
+  desc="Extra extra! Read all about it!"
+  img="https://raw.githubusercontent.com/ch3rries/ch3rries/main/assets/StickersDoodle_cherry_rose.16b7d873.gif"
+/>
 
 <style>
   .bio {
@@ -13,7 +20,7 @@ import Default from "@layouts/Default.astro";
   .bio div:not(div:first-child) {
     position: relative;
     padding: 16px;
-    margin: 0 0 16px 16px;
+    margin: 0 0 0 16px;
     background: var(--surface0);
     border-radius: 32px;
     display: flex;
@@ -133,7 +140,6 @@ import Default from "@layouts/Default.astro";
   </div>
 
   <div id="socials">
-    <!--TODO: Add about blank-->
     <pill>
       <i class="fa-brands fa-reddit"></i>
       <a href="https://reddit.com/u/XSuperOptical">Reddit</a>
@@ -182,9 +188,10 @@ import Default from "@layouts/Default.astro";
     </ul>
   </ul>
 
-  <!--
+  <h1>Programming</h1>
   <p style="margin-bottom: 0;">
-    Anyway, here's my experience in some programming languages summed up:
+    Below is a list of my skills in different programming languages. The bar
+    represents my knowledge and capacity to understand and use a language.
   </p>
 
   <div id="bars">
@@ -222,5 +229,4 @@ import Default from "@layouts/Default.astro";
     <li>Personal Projects</li>
     <li>Nerdy Stuff</li>
   </ul>
--->
 </Default>
