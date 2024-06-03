@@ -13,7 +13,9 @@ import Meta from "@components/Meta.astro";
   .bio {
     display: grid;
     grid-template-columns: 25% auto;
-    margin: 0 0 16px 0;
+    padding: 0 0 var(--m-px) 0;
+    border-bottom: var(--border-normal) dotted var(--surface0);
+    margin: 0 0 var(--m-px) 0;
     flex-direction: column;
   }
 
@@ -69,7 +71,6 @@ import Meta from "@components/Meta.astro";
     padding: 16px;
     border-radius: 8px;
     margin: 0 0 8px 0;
-    background: var(--surface0);
   }
 
   pill i {
@@ -141,7 +142,7 @@ import Meta from "@components/Meta.astro";
 
   <div id="socials">
     <pill>
-      <i class="fa-brands fa-reddit"></i>
+      <i class="fa-brands fa-reddit" style="color: #FF5700;"></i>
       <a href="https://reddit.com/u/XSuperOptical">Reddit</a>
     </pill>
     <pill>
@@ -149,15 +150,15 @@ import Meta from "@components/Meta.astro";
       <a href="https://github.com/ch3rries">Github</a>
     </pill>
     <pill>
-      <i class="fa-brands fa-x-twitter"></i>
-      <a href="https://x.com/cherryponee">X (Twitter)</a>
+      <i class="fa-brands fa-twitter" style="color: #1da1f2;"></i>
+      <a href="https://x.com/cherryponee">Twitter</a>
     </pill>
     <pill>
-      <i class="fa-brands fa-discord"></i>
+      <i class="fa-brands fa-discord" style="color: #5865f2;"></i>
       <a href="#Thisismydiscordusername!">4912</a>
     </pill>
     <pill>
-      <i class="fa-solid fa-envelope"></i>
+      <i class="fa-solid fa-envelope" style="color: var(--blue);"></i>
       <a href="mailto:mail.noahhancock@gmail.com">Email</a>
     </pill>
   </div>

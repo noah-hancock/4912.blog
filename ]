@@ -39,17 +39,12 @@ const blogName = "4912";
   #name a {
     font-family: var(--heading);
     color: var(--blue);
-    padding: var(--s-px);
+    padding: 4px;
     border: var(--blue) solid var(--border-normal);
-    border-radius: var(--s-px);
     text-decoration: none;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-
-  #name a:hover {
-    background: var(--surface0);
   }
 
   #menu {
@@ -65,24 +60,11 @@ const blogName = "4912";
     text-decoration: none;
     color: var(--blue);
     font-family: var(--body);
-    padding: var(--s-px);
-  }
-
-  #menu li a:hover {
-    background: var(--surface0);
-    border-radius: var(--s-px);
-    outline: var(--surface1) solid var(--border-normal);
   }
 
   #themeToggleButton {
     color: var(--text);
-    cursor: pointer;
-    padding: var(--s-px);
-  }
-  #themeToggleButton:hover {
-    background: var(--surface0);
-    border-radius: var(--s-px);
-    outline: var(--surface1) solid var(--border-normal);
+    cursor: progress;
   }
 </style>
 

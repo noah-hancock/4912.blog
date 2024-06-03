@@ -39,6 +39,15 @@
   --heading: "Space Grotesk";
   --body: "Inter";
   --mono: "Fantasque";
+  --b-px: 32px;
+  --m-px: 16px;
+  --s-px: 8px;
+  --b-rem: 2rem;
+  --m-rem: 1rem;
+  --s-rem: 0.5rem;
+  --border-thick: 3px;
+  --border-normal: 2px;
+  --border-thin: 1px;
 }
 
 .dark {
@@ -113,7 +122,7 @@ article h2,
 article h3 {
   font-weight: 500;
   font-family: var(--heading);
-  margin: 0 0 0.5rem 0;
+  margin: 0 0 var(--s-rem) 0;
 }
 
 article h1 {
@@ -143,17 +152,21 @@ article p {
 article ul,
 article ol,
 article p {
-  margin: 0 0 2rem 0;
+  margin: 0 0 var(--b-rem) 0;
 }
 
 article ul ul {
-  margin: 0 0 0 2rem;
+  margin: 0 0 0 var(--b-rem);
 }
 
 article li {
-  margin-left: 2rem;
+  margin-left: var(--b-rem);
 }
 
 article {
-  padding: 32px 16px;
+  padding: var(--b-px) var(--m-px);
+}
+
+* {
+  /* background: rgba(255, 0, 0, 0.1); */
 }
