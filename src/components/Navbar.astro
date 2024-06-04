@@ -2,25 +2,7 @@
 // INFO: This file contains the Navbar component.
 const { pageTitle } = Astro.props;
 const blogName = "4912";
-// TODO: Complete rewrite
 ---
-
-<script is:inline>
-  // TODO: Create button icon switcher
-  // Yes, I know you've already tried.
-  function switchTheme() {
-    const html = document.documentElement;
-
-    // Toggle button logic
-    if (html.classList.contains("dark")) {
-      html.className = "light";
-      localStorage.setItem("theme", "light");
-    } else {
-      html.className = "dark";
-      localStorage.setItem("theme", "dark");
-    }
-  }
-</script>
 
 <style>
   wrapper {
@@ -39,7 +21,7 @@ const blogName = "4912";
   #name a {
     font-family: var(--heading);
     color: var(--blue);
-    padding: var(--s-px);
+    padding: var(--xs-px);
     border: var(--blue) solid var(--border-normal);
     border-radius: var(--s-px);
     text-decoration: none;
@@ -65,23 +47,13 @@ const blogName = "4912";
     text-decoration: none;
     color: var(--blue);
     font-family: var(--body);
-    padding: var(--s-px);
+    padding: var(--xs-px) var(--xs-px);
+    margin: 0 var(--xs-px);
   }
 
   #menu li a:hover {
     background: var(--surface0);
-    border-radius: var(--s-px);
-    outline: var(--surface1) solid var(--border-normal);
-  }
-
-  #themeToggleButton {
-    color: var(--text);
-    cursor: pointer;
-    padding: var(--s-px);
-  }
-  #themeToggleButton:hover {
-    background: var(--surface0);
-    border-radius: var(--s-px);
+    border-radius: var(--xs-px);
     outline: var(--surface1) solid var(--border-normal);
   }
 </style>
@@ -96,8 +68,6 @@ const blogName = "4912";
     <div id="menu">
       <li><a href="/about">About</a></li>
       <li><a href="/archive">Archive</a></li>
-      <i id="themeToggleButton" onclick="switchTheme()" class="fa-solid fa-sun"
-      ></i>
     </div>
   </nav>
 </wrapper>
