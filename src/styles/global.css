@@ -122,7 +122,11 @@ body {
 
 article h1,
 article h2,
-article h3 {
+article h3,
+article h4,
+article h5,
+article h6
+{
   color: var(--text);
   font-weight: 700;
   line-height: 1.15;
@@ -141,6 +145,18 @@ article h2 {
 
 article h3 {
   font-size: 28.83px;
+}
+
+article h4 {
+  font-size: 25.63px;
+}
+
+article h5 {
+  font-size: 22.78px;
+}
+
+article h6 {
+  font-size: 20.25px;
 }
 
 article a,
@@ -163,6 +179,12 @@ article li {
 
 article {
   padding: var(--b-px) var(--m-px);
+}
+
+article img {
+  width: 100%;
+  margin: var(--m-px) 0;
+  border-radius: var(--m-px);
 }
 
 * {

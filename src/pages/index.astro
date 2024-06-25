@@ -2,21 +2,42 @@
 import Default from "@layouts/Default.astro";
 import BlogCardRecent from "@components/BlogCardRecent.astro";
 import Meta from "@components/Meta.astro";
-// TODO: Make this only display recent posts.
-const recentPosts = await Astro.glob("@posts/*");
+import { formatBlogPosts } from "@components/js/utilities.js";
+
+const recentPosts = await Astro.glob("@posts/*.md");
+const formattedPosts = formatBlogPosts(recentPosts, {
+  limit: 5,
+});
 ---
 
 <Meta title="Home" desc="Check out my recent blogs our browse my webpage." />
 
+<style>
+  #hero {
+    margin-bottom: var(--b-px);
+  }
+
+  #hero h1 {
+    font-family: var(--heading);
+    color: var(--blue);
+  }
+
+  #hero h1,
+  #hero p {
+    text-align: center;
+  }
+</style>
+
 <Default pageTitle="Home">
-  <h1>4912.blog</h1>
-  <p>
-    Welcome to the website! As per the top-level domain, this is my blog
-    website!
-  </p>
-  <h2>Catch up with my recent blogs!</h2>
+  <div id="hero">
+    <h1>Welcome to 4912.</h1>
+    <p>
+      Hello! View some recent blogs below. Use the navigation bar to see my
+      about me or view the archive (currently unfinished).
+    </p>
+  </div>
   {
-    recentPosts.map((post) => (
+    formattedPosts.map((post) => (
       <BlogCardRecent
         title={post.frontmatter.title}
         desc={post.frontmatter.desc.slice(0, 120)}
