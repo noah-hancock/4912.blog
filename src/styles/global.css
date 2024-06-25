@@ -1,4 +1,6 @@
 /* Register fonts */
+
+
 @font-face {
   font-family: "Fantasque";
   src: url(Fantasque/FantasqueSansMNerdFont-Regular.ttf);
@@ -121,43 +123,38 @@ body {
 article h1,
 article h2,
 article h3 {
-  font-weight: 500;
-  font-family: var(--heading);
-  margin: 0 0 var(--s-rem) 0;
+  color: var(--text);
+  font-weight: 700;
+  line-height: 1.15;
+  font-family: var(--body);
+  margin-top: 2.25rem;
+  margin-bottom: 1rem;
 }
 
 article h1 {
-  font-size: 2rem;
-  color: var(--text);
+  font-size: 36.49px;
 }
 
 article h2 {
-  font-size: 1.75rem;
-  color: var(--subtext0);
+  font-size: 32.44px;
 }
 
 article h3 {
-  font-size: 1.5rem;
-  color: var(--subtext1);
+  font-size: 28.83px;
 }
 
 article a,
 article li,
 article p {
   font-family: var(--body);
-  line-height: 1.9rem;
-  font-size: 1.2rem;
+  line-height: 1.6;
+  font-size: 18px;
   color: var(--text);
-}
-
-article ul,
-article ol,
-article p {
-  margin: 0 0 var(--b-rem) 0;
+  font-weight: 500;
 }
 
 article ul ul {
-  margin: 0 0 0 var(--b-rem);
+  margin-left: var(--b-rem);
 }
 
 article li {

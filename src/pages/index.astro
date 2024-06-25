@@ -9,9 +9,12 @@ const recentPosts = await Astro.glob("@posts/*");
 <Meta title="Home" desc="Check out my recent blogs our browse my webpage." />
 
 <Default pageTitle="Home">
-  <h1 style="text-align: center; margin-bottom: 2rem;">
-    Catch up with my recent blogs!
-  </h1>
+  <h1>4912.blog</h1>
+  <p>
+    Welcome to the website! As per the top-level domain, this is my blog
+    website!
+  </p>
+  <h2>Catch up with my recent blogs!</h2>
   {
     recentPosts.map((post) => (
       <BlogCardRecent

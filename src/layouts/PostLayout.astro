@@ -4,5 +4,7 @@ import Default from "@layouts/Default.astro";
 ---
 
 <Default pageTitle={frontmatter.title}>
+  <h1>{frontmatter.title}</h1>
+  <hr style="margin-bottom: 2.25rem;" />
   <slot />
 </Default>

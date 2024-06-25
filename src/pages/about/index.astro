@@ -53,7 +53,6 @@ import Meta from "@components/Meta.astro";
 
   bar fill {
     display: block;
-
     border-radius: 4px;
     min-height: 16px;
     /* TODO: Make gradient. */
@@ -62,15 +61,12 @@ import Meta from "@components/Meta.astro";
   }
 
   #socials {
-    margin: 0 0 16px 0;
   }
 
   pill {
     display: flex;
     align-items: center;
-    padding: 16px;
     border-radius: 8px;
-    margin: 0 0 8px 0;
   }
 
   pill i {
@@ -85,10 +81,9 @@ import Meta from "@components/Meta.astro";
     width: 32px;
   }
 
-  pill a {
-    margin: 0;
-    font-size: 2rem;
-    font-weight: 400;
+  pill a,
+  pill p {
+    font-size: 36.49px;
     font-style: italic;
     text-decoration: none;
   }
@@ -131,7 +126,7 @@ import Meta from "@components/Meta.astro";
     </div>
     <div>
       <div>
-        <h1>Hi, I'm Noah.</h1>
+        <h1 style="margin-top: 0;">Hi, I'm Noah.</h1>
         <p style="margin: 0;">
           I'm a novice programmer with a love for making websites. Here's my
           about me, I mean, this is what you're visiting me for - right?
@@ -154,12 +149,12 @@ import Meta from "@components/Meta.astro";
       <a href="https://x.com/cherryponee">Twitter</a>
     </pill>
     <pill>
-      <i class="fa-brands fa-discord" style="color: #5865f2;"></i>
-      <a href="#Thisismydiscordusername!">4912</a>
-    </pill>
-    <pill>
       <i class="fa-solid fa-envelope" style="color: var(--blue);"></i>
       <a href="mailto:mail.noahhancock@gmail.com">Email</a>
+    </pill>
+    <pill>
+      <i class="fa-brands fa-discord" style="color: #5865f2;"></i>
+      <p>4912</p>
     </pill>
   </div>
 
