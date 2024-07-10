@@ -6,7 +6,10 @@ const { title, desc, date, author, tags, url } = Astro.props;
 <style>
   cardRecent {
     display: grid;
-    padding: var(--b-px) 0;
+    padding: var(--b-px);
+    margin: var(--b-px) 0;
+    box-shadow: 0 0 8px var(--surface2);
+    border-radius: var(--b-px);
   }
 
   cardRecent h2 {

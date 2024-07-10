@@ -6,10 +6,16 @@ date: 2024-06-16
 author: "Noah Hancock"
 tags: ["design", "typography", "colors" ]
 ---
-One of my favorite hobbies is design, and for a while now I've been studying and taking small courses about design. I think my favorite thing regarding the process of design is its simplicity. Now, I can understand why some people aren't fond of modern designs, they do look boring compared to the fun and quirky era during the start of the World Wide Web.
 
-![Old image of the Google search engine.](https://hearst-images.s3.amazonaws.com/getty/article/178/98/57366657_XS.jpg)
-But enough of that, I would like to discuss my opinions on this topic, and my adventure in the forest of design.
+One of my most recently picked up hobbies is graphic design - I've found my self fascinated by small concepts that can completely change how a design is seen or read. Generally, I've never been a great artist, but with the simplicity of modern design, I've found it easy for me to participate. Nowadays, the graphic design world contains more mathematical elements - this is for consistency and accessibility. This shift into minimalism has concerned and upset the masses. So what's the problem?
 
 # Modernization
-A lot of people despise modernization. They assume that modernization is **only** a design choice, just a company making a change because they can. The actual reason for a brand or design maker investing into modernizing designs is for accessibility.
+Modernization is updating something to make it look or work contemporaneously. In this case, designs must be updated to fit our current setting in the world. Designs between apps are kept similar, flyers fit the design of the building they're posted on, social media posts are optimized for each platform's aspect ratio - these are a few examples.  
+Modernization is a harsh term to some. They think modern design has lost its soul and all the aspects that make something seem "personal" is lost - maybe it has, but let's first understand why these changes are made.
+
+## Accessibility
+Companies and designers want their product or service known: they need to gain as many impressions as possible. Keep the following in mind when creating a design accessible for everyone:
+- **Color**:
+- **Typography**:
+- **Contrast**:
+- **Simplicity**: (Target age, attention span, easy to read)
