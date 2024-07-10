@@ -1,6 +1,6 @@
 export function formatBlogPosts(posts, {
-    limit = undefined 
-  } = {}) { 
+    limit = undefined
+  } = {}) {
   const filteredPosts = posts.reduce((acc, post) => {
     acc.push(post)
     return acc;

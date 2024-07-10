@@ -3,18 +3,30 @@
 ---
 
 <script is:inline>
+  function switchButtonIcon(theme) {
+    const button = document.getElementById("themeToggleButton");
+    if (theme == "light") {
+      button.innerHTML =
+        //REFACTOR: You kinda suck, you know what to fix here
+        //Get rid of the <i> element stuff
+        '<i style="margin: 0 var(--xs-px); font-size: 1.4rem;" class="fa-solid fa-sun"></i>';
+    } else if (theme == "dark") {
+      button.innerHTML =
+        '<i style="margin: 0 var(--xs-px); font-size: 1.4rem;" class="fa-solid fa-moon"></i>';
+    }
+  }
+
   function switchTheme() {
     const html = document.documentElement;
-    const button = document.getElementById("themeToggleButton");
 
     // Toggle button logic
     if (html.classList.contains("dark")) {
       html.className = "light";
-      button.innerHTML = "Theme: Light";
+      switchButtonIcon("dark");
       localStorage.setItem("theme", "light");
     } else {
       html.className = "dark";
-      button.innerHTML = "Theme: Dark";
+      switchButtonIcon("light");
       localStorage.setItem("theme", "dark");
     }
   }
@@ -49,16 +61,14 @@
   }
 
   #links a i {
-    margin: 0 4px;
+    margin: 0 var(--xs-px);
     color: var(--text);
     font-size: 1.5rem;
   }
 
   #themeToggleButton {
-    margin-left: var(--xs-px);
     padding-left: var(--xs-px);
     border-left: solid var(--overlay0) var(--border-normal);
-    color: var(--blue);
     cursor: pointer;
   }
 </style>
@@ -74,7 +84,9 @@
     <a href="https://reddit.com/u/XSuperOptical" aria-label="reddit"
       ><i class="fa-brands fa-reddit-alien"></i></a
     >
-    <a id="themeToggleButton" onclick="switchTheme()">Theme: NaN</a>
+    <a id="themeToggleButton" onclick="switchTheme()"
+      ><i class="fa-regular fa-no"></i></a
+    >
   </div>
   <p style="margin-top: 8px;">
     Noah Hancock, 2024 - Powered by <a
@@ -86,7 +98,6 @@
 <script is:inline>
   const html = document.documentElement;
   const currentTheme = localStorage.getItem("theme");
-  const button = document.getElementById("themeToggleButton");
 
   // No theme, add default
   if (!html.classList.contains("light", "dark")) {
@@ -97,9 +108,9 @@
   // Theme from localStorage
   if (currentTheme == "dark") {
     html.className = "dark";
-    button.innerHTML = "Theme: Dark";
+    switchButtonIcon("light");
   } else {
     html.className = "light";
-    button.innerHTML = "Theme: Light";
+    switchButtonIcon("dark");
   }
 </script>
