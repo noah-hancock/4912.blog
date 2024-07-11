@@ -118,6 +118,7 @@
 
 body {
   background: var(--base);
+  position: relative;
 }
 
 article h1,
@@ -148,7 +149,7 @@ article h3 {
 }
 
 article h4 {
-  font-size: 25.63px;
+  font-size: 925.63px;
 }
 
 article h5 {
@@ -178,6 +179,7 @@ article li {
 }
 
 article {
+  margin-top: calc(var(--b-px) * 1.5);
   padding: var(--b-px) var(--m-px);
 }
 

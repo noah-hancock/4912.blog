@@ -6,10 +6,7 @@ const { title, desc, date, author, tags, url } = Astro.props;
 <style>
   cardRecent {
     display: grid;
-    padding: var(--b-px);
     margin: var(--b-px) 0;
-    box-shadow: 0 0 8px var(--surface2);
-    border-radius: var(--b-px);
   }
 
   cardRecent h2 {
@@ -39,13 +36,19 @@ const { title, desc, date, author, tags, url } = Astro.props;
   a:hover {
     background: var(--surface1);
   }
+
+  #date {
+    font-family: var(--heading);
+    color: var(--text);
+    float: right;
+  }
 </style>
 
 <cardRecent>
   <div>
     <h2>{title}</h2>
     <p id="body">{desc}</p>
-    <p style="float:right">{date}</p>
+    <p id="date">{date}</p>
   </div>
   <a href={url}>Read -></a>
 </cardRecent>

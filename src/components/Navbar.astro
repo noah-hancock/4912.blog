@@ -6,16 +6,23 @@ const blogName = "4912";
 
 <style>
   wrapper {
-    display: flex;
-    align-items: center;
+    z-index: 1000;
+    left: 0;
+    right: 0;
+    max-width: 800px;
+    margin: 5% auto;
+    border-radius: var(--b-px);
+    margin: var(--s-px);
     padding: var(--s-px);
+    background: rgba(186, 194, 222, 0.2);
+    backdrop-filter: blur(44px);
+    position: fixed;
   }
 
   nav {
     display: flex;
     justify-content: space-between;
-    align-content: center;
-    width: 100%;
+    align-items: center;
   }
 
   #name a {
@@ -30,31 +37,10 @@ const blogName = "4912";
     align-items: center;
   }
 
-  #name a:hover {
-    background: var(--surface0);
-  }
-
-  #menu {
-    display: flex;
-    align-items: center;
-  }
-
-  #menu li {
-    list-style: none;
-  }
-
-  #menu li a {
-    text-decoration: none;
-    color: var(--blue);
-    font-family: var(--body);
-    padding: var(--s-px);
-    margin: 0 var(--xs-px);
-  }
-
-  #menu li a:hover {
-    background: var(--surface0);
-    border-radius: var(--b-px);
-    outline: var(--surface1) solid var(--border-normal);
+  #dropdown {
+    font-size: 1.5rem;
+    margin: 0 var(--s-px);
+    cursor: pointer;
   }
 </style>
 
@@ -65,9 +51,6 @@ const blogName = "4912";
     <div id="name">
       <a href="/">{blogName}</a>
     </div>
-    <div id="menu">
-      <li><a href="/about">About</a></li>
-      <li><a href="/archive">Archive</a></li>
-    </div>
+    <a id="dropdown"><i class="fa-solid fa-bars"></i></a>
   </nav>
 </wrapper>

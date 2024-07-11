@@ -7,7 +7,6 @@
     const button = document.getElementById("themeToggleButton");
     if (theme == "light") {
       button.innerHTML =
-        //REFACTOR: You kinda suck, you know what to fix here
         //Get rid of the <i> element stuff
         '<i style="margin: 0 var(--xs-px); font-size: 1.4rem;" class="fa-solid fa-sun"></i>';
     } else if (theme == "dark") {
@@ -50,17 +49,25 @@
   #links {
     display: flex;
     justify-content: center;
-    align-items: center;
   }
 
-  #links a {
+  #links div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--b-px);
+    padding: var(--s-px);
+    box-shadow: 0 0 16px rgb(76, 79, 105, 0.4);
+  }
+
+  #links div a {
     display: flex;
     justify-content: center;
     align-items: center;
     text-decoration: none;
   }
 
-  #links a i {
+  #links div a i {
     margin: 0 var(--xs-px);
     color: var(--text);
     font-size: 1.5rem;
@@ -75,18 +82,20 @@
 
 <footer>
   <div id="links">
-    <a href="https://github.com/ch3rries" aria-label="GitHub"
-      ><i class="fa-brands fa-github"></i></a
-    >
-    <a href="https://x.com/cherryponee" aria-label="X"
-      ><i class="fa-brands fa-x-twitter"></i></a
-    >
-    <a href="https://reddit.com/u/XSuperOptical" aria-label="reddit"
-      ><i class="fa-brands fa-reddit-alien"></i></a
-    >
-    <a id="themeToggleButton" onclick="switchTheme()"
-      ><i class="fa-regular fa-no"></i></a
-    >
+    <div>
+      <a href="https://github.com/ch3rries" aria-label="GitHub"
+        ><i class="fa-brands fa-github"></i></a
+      >
+      <a href="https://x.com/cherryponee" aria-label="X"
+        ><i class="fa-brands fa-x-twitter"></i></a
+      >
+      <a href="https://reddit.com/u/XSuperOptical" aria-label="reddit"
+        ><i class="fa-brands fa-reddit-alien"></i></a
+      >
+      <a id="themeToggleButton" onclick="switchTheme()"
+        ><i class="fa-regular fa-no"></i></a
+      >
+    </div>
   </div>
   <p style="margin-top: 8px;">
     Noah Hancock, 2024 - Powered by <a
