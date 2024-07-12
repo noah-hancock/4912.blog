@@ -5,24 +5,29 @@ const blogName = "4912";
 ---
 
 <style>
+  crust {
+    position: sticky;
+    top: 0;
+  }
+
   wrapper {
     z-index: 1000;
-    left: 0;
-    right: 0;
-    max-width: 800px;
-    margin: 5% auto;
     border-radius: var(--b-px);
     margin: var(--s-px);
     padding: var(--s-px);
     background: rgba(186, 194, 222, 0.2);
     backdrop-filter: blur(44px);
-    position: fixed;
+    box-shadow: 0 0 16px rgb(76, 79, 105, 0.2);
+    display: flex;
+    justify-content: flex-start;
   }
 
   nav {
     display: flex;
     justify-content: space-between;
+    width: 100%;
     align-items: center;
+    flex-direction: row;
   }
 
   #name a {
@@ -39,18 +44,20 @@ const blogName = "4912";
 
   #dropdown {
     font-size: 1.5rem;
-    margin: 0 var(--s-px);
+    color: var(--text);
+    margin: 0 var(--m-px);
     cursor: pointer;
   }
 </style>
 
 <title>{pageTitle} - {blogName}</title>
-
-<wrapper>
-  <nav>
-    <div id="name">
-      <a href="/">{blogName}</a>
-    </div>
-    <a id="dropdown"><i class="fa-solid fa-bars"></i></a>
-  </nav>
-</wrapper>
+<crust>
+  <wrapper>
+    <nav>
+      <div id="name">
+        <a href="/">{blogName}</a>
+      </div>
+      <a id="dropdown"><i class="fa-solid fa-bars"></i></a>
+    </nav>
+  </wrapper>
+</crust>

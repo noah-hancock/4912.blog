@@ -14,17 +14,17 @@ import Meta from "@components/Meta.astro";
     display: grid;
     grid-template-columns: 25% auto;
     padding: 0 0 var(--m-px) 0;
-    border-bottom: var(--border-normal) dotted var(--surface0);
+    border-bottom: var(--border-normal) dotted rgb(var(--surface0));
     margin: 0 0 var(--m-px) 0;
     flex-direction: column;
   }
 
   .bio div:not(div:first-child) {
     position: relative;
-    padding: 16px;
-    margin: 0 0 0 16px;
+    padding: var(--m-px);
+    margin: 0 0 0 var(--m-px);
     background: var(--surface0);
-    border-radius: 32px;
+    border-radius: var(--b-px);
     display: flex;
     align-items: center;
   }
@@ -35,60 +35,59 @@ import Meta from "@components/Meta.astro";
   }
 
   #bars {
-    margin: 16px 0 2rem 0;
+    margin: var(--m-px) 0 2rem 0;
   }
 
   bar {
-    padding: 8px;
-    margin: 16px 0;
+    padding: var(--s-px);
+    margin: var(--m-px) 0;
     display: block;
-    min-height: 32px;
-    border-radius: 8px;
-    border: 2px solid var(--surface0);
+    min-height: var(--b-px);
+    border-radius: var(--s-px);
+    background: rgba(var(--surface0), 0.2);
   }
 
   bar p {
-    margin: 0 0 8px 0;
+    margin: 0 0 var(--s-px) 0;
   }
 
   bar fill {
     display: block;
-    border-radius: 4px;
-    min-height: 16px;
+    border-radius: var(--xs-px);
+    min-height: var(--m-px);
     /* TODO: Make gradient. */
     /* Or replace with GitHub language colors */
-    background: var(--blue);
-  }
-
-  #socials {
+    background: rgba(var(--blue), 0.6);
+    backdrop-filter: blur(44px);
   }
 
   pill {
     display: flex;
     align-items: center;
-    border-radius: 8px;
+    background: rgba(var(--surface0), 0.2);
+    box-shadow: 0 0 var(--s-px) rgb(76, 79, 105, 0.2);
+    border-radius: var(--m-px);
+    backdrop-filter: blur(44px);
+    cursor: pointer;
+    margin: var(--m-px) 0;
   }
 
   pill i {
-    margin: 0 16px 0 0;
-    padding: 0 16px 0 0;
-    border-right: 2px solid var(--text);
+    padding: var(--m-px);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--text);
-    font-size: 2rem;
+    color: rgb(var(--text));
+    font-size: var(--b-rem);
     width: 32px;
   }
 
   pill a,
   pill p {
-    font-size: 36.49px;
-    font-style: italic;
     text-decoration: none;
   }
 
-  pill a:hover {
+  pill:hover > a {
     transition: ease 0.1s;
     font-weight: 800;
   }
