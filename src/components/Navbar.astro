@@ -5,37 +5,36 @@ const blogName = "4912";
 ---
 
 <style>
-  crust {
-    position: sticky;
-    top: 0;
-  }
-
   wrapper {
+    top: 0;
+    left: 0;
+    right: 0;
     z-index: 1000;
-    border-radius: var(--b-px);
-    margin: var(--s-px);
-    padding: var(--s-px);
-    background: rgba(186, 194, 222, 0.2);
-    backdrop-filter: blur(44px);
-    box-shadow: 0 0 16px rgb(76, 79, 105, 0.2);
+    position: fixed;
+    padding: var(--xs-px);
+    background: rgba(var(--crust), 0.6);
+    backdrop-filter: blur(20px) saturate(180%);
+    border-bottom: var(--border-normal) solid rgba(var(--overlay0), 0.4);
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
   }
 
   nav {
     display: flex;
     justify-content: space-between;
     width: 100%;
+    max-width: 800px;
     align-items: center;
     flex-direction: row;
   }
 
   #name a {
     font-family: var(--heading);
-    color: var(--blue);
+    color: rgb(var(--blue));
     padding: var(--s-px);
-    border: var(--blue) solid var(--border-normal);
-    border-radius: var(--b-px);
+    /* border: rgb(var(--blue)) solid var(--border-normal); */
+    /* border-radius: var(--b-px); */
+    font-size: 1.266rem;
     text-decoration: none;
     display: flex;
     justify-content: center;
@@ -43,21 +42,25 @@ const blogName = "4912";
   }
 
   #dropdown {
-    font-size: 1.5rem;
-    color: var(--text);
-    margin: 0 var(--m-px);
+    margin-right: var(--s-px);
+  }
+
+  #dropdown a {
+    font-size: calc(var(--m-rem) + var(--s-rem));
+    color: rgb(var(--text));
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-content: center;
   }
 </style>
 
 <title>{pageTitle} - {blogName}</title>
-<crust>
-  <wrapper>
-    <nav>
-      <div id="name">
-        <a href="/">{blogName}</a>
-      </div>
-      <a id="dropdown"><i class="fa-solid fa-bars"></i></a>
-    </nav>
-  </wrapper>
-</crust>
+<wrapper>
+  <nav>
+    <div id="name">
+      <a href="/">{blogName}</a>
+    </div>
+    <div id="dropdown"><a><i class="fa-solid fa-chevron-down"></i></a></div>
+  </nav>
+</wrapper>

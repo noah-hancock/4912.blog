@@ -1,5 +1,6 @@
 ---
 // INFO: This file contains the Footer component.
+//UPDATE: SIZING AND COLORS
 ---
 
 <script is:inline>
@@ -7,7 +8,6 @@
     const button = document.getElementById("themeToggleButton");
     if (theme == "light") {
       button.innerHTML =
-        //Get rid of the <i> element stuff
         '<i style="margin: 0 var(--xs-px); font-size: 1.4rem;" class="fa-solid fa-sun"></i>';
     } else if (theme == "dark") {
       button.innerHTML =
@@ -34,11 +34,11 @@
 <style>
   footer {
     background: var(--mantle);
-    padding: 16px;
+    padding: var(--m-px);
     flex-shrink: 1;
     text-align: center;
     font-family: var(--body);
-    font-size: 0.75rem;
+    font-size: var(--s-rem);
     color: var(--surface1);
   }
 

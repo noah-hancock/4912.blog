@@ -137,27 +137,27 @@ article h6
 }
 
 article h1 {
-  font-size: 36.49px;
+  font-size: 2.027rem;
 }
 
 article h2 {
-  font-size: 32.44px;
+  font-size: 1.802rem;
 }
 
 article h3 {
-  font-size: 28.83px;
+  font-size: 1.602rem;
 }
 
 article h4 {
-  font-size: 925.63px;
+  font-size: 1.424rem;
 }
 
 article h5 {
-  font-size: 22.78px;
+  font-size: 1.266rem;
 }
 
 article h6 {
-  font-size: 20.25px;
+  font-size: 1.125rem;
 }
 
 article a,
@@ -165,7 +165,7 @@ article li,
 article p {
   font-family: var(--body);
   line-height: 1.8;
-  font-size: 18px;
+  font-size: 1rem;
   color: rgb(var(--text));
   font-weight: 500;
 }
@@ -179,6 +179,7 @@ article li {
 }
 
 article {
+  margin-top: 75px;
   padding: 0 var(--m-px) var(--b-px) var(--m-px);
 }
 
