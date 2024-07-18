@@ -6,68 +6,65 @@ const blogName = "4912";
 
 <style>
   wrapper {
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    position: fixed;
+    padding: var(--xs-px);
+    border-bottom: var(--border-normal) solid rgba(var(--overlay0), 0.4);
     display: flex;
-    align-items: center;
-    padding: var(--s-px);
+    justify-content: center;
   }
 
   nav {
     display: flex;
     justify-content: space-between;
-    align-content: center;
     width: 100%;
+    max-width: 800px;
+    align-items: center;
+    flex-direction: row;
   }
 
   #name a {
     font-family: var(--heading);
-    color: var(--blue);
+    color: rgb(var(--blue));
     padding: var(--s-px);
-    border: var(--blue) solid var(--border-normal);
-    border-radius: var(--b-px);
+    /* border: rgb(var(--blue)) solid var(--border-normal); */
+    /* border-radius: var(--b-px); */
+    font-size: 1.266rem;
     text-decoration: none;
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
-  #name a:hover {
-    background: var(--surface0);
+  #dropdown {
+    margin-right: var(--s-px);
   }
 
-  #menu {
+  #dropdown a {
+    font-size: calc(var(--m-rem) + var(--s-rem));
+    color: rgb(var(--text));
+    cursor: pointer;
     display: flex;
-    align-items: center;
-  }
-
-  #menu li {
-    list-style: none;
-  }
-
-  #menu li a {
-    text-decoration: none;
-    color: var(--blue);
-    font-family: var(--body);
-    padding: var(--s-px);
-    margin: 0 var(--xs-px);
-  }
-
-  #menu li a:hover {
-    background: var(--surface0);
-    border-radius: var(--b-px);
-    outline: var(--surface1) solid var(--border-normal);
+    justify-content: center;
+    align-content: center;
   }
 </style>
 
 <title>{pageTitle} - {blogName}</title>
-
-<wrapper>
+<wrapper class="blurry">
   <nav>
     <div id="name">
       <a href="/">{blogName}</a>
     </div>
-    <div id="menu">
-      <li><a href="/about">About</a></li>
-      <li><a href="/archive">Archive</a></li>
-    </div>
+    <!--TEMPORARY -->
+    <a
+      href="/about"
+      style="color: rgb(var(--blue)); font-family: var(--body); text-decoration: none;"
+      >About Me</a
+    >
+    <!--<div id="dropdown"><a><i class="fa-solid fa-chevron-down"></i></a></div>-->
   </nav>
 </wrapper>

@@ -54,61 +54,61 @@
 }
 
 .dark {
-  --rosewater: #f5e0dc;
-  --flamingo: #f2cdcd;
-  --pink: #f5c2e7;
-  --mauve: #cba6f7;
-  --red: #f38ba8;
-  --maroon: #eba0ac;
-  --peach: #fab387;
-  --yellow: #f9e2af;
-  --green: #a6e3a1;
-  --teal: #94e2d5;
-  --sky: #89dceb;
-  --sapphire: #74c7ec;
-  --blue: #89b4fa;
-  --lavender: #b4befe;
-  --text: #cdd6f4;
-  --subtext1: #bac2de;
-  --subtext0: #a6adc8;
-  --overlay2: #9399b2;
-  --overlay1: #7f849c;
-  --overlay0: #6c7086;
-  --surface2: #585b70;
-  --surface1: #45475a;
-  --surface0: #313244;
-  --base: #1e1e2e;
-  --mantle: #181825;
-  --crust: #11111b;
+  --rosewater: 245, 224, 220;
+  --flamingo: 242, 205, 205;
+  --pink: 245, 194, 231;
+  --mauve: 203, 166, 247;
+  --red: 243, 139, 168;
+  --maroon: 235, 160, 172;
+  --peach: 250, 179, 135;
+  --yellow: 249, 226, 175;
+  --green: 166, 227, 161;
+  --teal: 148, 226, 213;
+  --sky: 137, 220, 235;
+  --sapphire: 116, 199, 236;
+  --blue: 137, 180, 250;
+  --lavender: 180, 190, 254;
+  --text: 205, 214, 244;
+  --subtext1: 186, 194, 222;
+  --subtext0: 166, 173, 200;
+  --overlay2: 148, 154, 179;
+  --overlay1: 127, 132, 156;
+  --overlay0: 108, 112, 134;
+  --surface2: 88, 91, 112;
+  --surface1: 69, 71, 90;
+  --surface0: 49, 50, 68;
+  --base: 30, 30, 46;
+  --mantle: 24, 24, 37;
+  --crust: 17, 17, 27;
 }
 
 .light {
-  --rosewater: #dc8a78;
-  --flamingo: #dd7878;
-  --pink: #ea76cb;
-  --mauve: #8839ef;
-  --red: #d20f39;
-  --maroon: #e64553;
-  --peach: #fe640b;
-  --yellow: #df8e1d;
-  --green: #40a02b;
-  --teal: #179299;
-  --sky: #04a5e5;
-  --sapphire: #209fb5;
-  --blue: #1e66f5;
-  --lavender: #7287fd;
-  --text: #4c4f69;
-  --subtext1: #5c5f77;
-  --subtext0: #6c6f85;
-  --overlay2: #7c7f93;
-  --overlay1: #8c8fa1;
-  --overlay0: #9ca0b0;
-  --surface2: #acb0be;
-  --surface1: #bcc0cc;
-  --surface0: #ccd0da;
-  --base: #eff1f5;
-  --mantle: #e6e9ef;
-  --crust: #dce0e8;
+  --rosewater: 220, 138, 120;
+  --flamingo: 221, 120, 120;
+  --pink: 234, 118, 203;
+  --mauve: 136, 57, 239;
+  --red: 210, 15, 57;
+  --maroon: 230, 69, 83;
+  --peach: 254, 100, 11;
+  --yellow: 223, 142, 29;
+  --green: 64, 160, 43;
+  --teal: 23, 146, 153;
+  --sky: 4, 165, 229;
+  --sapphire: 32, 159, 181;
+  --blue: 30, 102, 245;
+  --lavender: 114, 135, 253;
+  --text: 76, 79, 105;
+  --subtext1: 92, 95, 119;
+  --subtext0: 108, 111, 133;
+  --overlay2: 124, 127, 147;
+  --overlay1: 140, 143, 161;
+  --overlay0: 156, 160, 176;
+  --surface2: 172, 176, 190;
+  --surface1: 188, 192, 204;
+  --surface0: 204, 208, 218;
+  --base: 239, 241, 245;
+  --mantle: 230, 233, 239;
+  --crust: 220, 224, 232;
 }
 
 * {
@@ -117,7 +117,8 @@
 }
 
 body {
-  background: var(--base);
+  background: rgb(var(--mantle));
+  position: relative;
 }
 
 article h1,
@@ -127,7 +128,7 @@ article h4,
 article h5,
 article h6
 {
-  color: var(--text);
+  color: rgb(var(--text));
   font-weight: 700;
   line-height: 1.15;
   font-family: var(--body);
@@ -136,36 +137,36 @@ article h6
 }
 
 article h1 {
-  font-size: 36.49px;
+  font-size: 2.027rem;
 }
 
 article h2 {
-  font-size: 32.44px;
+  font-size: 1.802rem;
 }
 
 article h3 {
-  font-size: 28.83px;
+  font-size: 1.602rem;
 }
 
 article h4 {
-  font-size: 25.63px;
+  font-size: 1.424rem;
 }
 
 article h5 {
-  font-size: 22.78px;
+  font-size: 1.266rem;
 }
 
 article h6 {
-  font-size: 20.25px;
+  font-size: 1.125rem;
 }
 
 article a,
 article li,
 article p {
   font-family: var(--body);
-  line-height: 1.6;
-  font-size: 18px;
-  color: var(--text);
+  line-height: 1.8;
+  font-size: 1rem;
+  color: rgb(var(--text));
   font-weight: 500;
 }
 
@@ -178,7 +179,8 @@ article li {
 }
 
 article {
-  padding: var(--b-px) var(--m-px);
+  margin-top: 75px;
+  padding: 0 var(--m-px) var(--b-px) var(--m-px);
 }
 
 article img {
@@ -189,4 +191,11 @@ article img {
 
 * {
   /* background: rgba(255, 0, 0, 0.1); */
+}
+
+/* Reusable classes */
+
+.blurry {
+  background: rgba(var(--base), 0.4);
+  backdrop-filter: blur(20px);
 }

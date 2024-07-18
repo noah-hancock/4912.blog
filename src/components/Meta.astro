@@ -7,5 +7,17 @@ const { title, url, img, desc } = Astro.props;
 <meta property="og:url" content={url} />
 <meta property="og:image" content={img} />
 <meta property="og:description" content={desc} />
-<meta name="theme-color" content="#89b4fa" />
 <meta name="twitter:card" content="summary_large_image" />
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TFQWHV5BEB"
+></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+
+  gtag("config", "G-TFQWHV5BEB");
+</script>

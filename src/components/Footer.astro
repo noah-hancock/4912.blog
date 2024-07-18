@@ -3,18 +3,28 @@
 ---
 
 <script is:inline>
+  function switchButtonIcon(theme) {
+    const button = document.getElementById("themeToggleButton");
+    if (theme == "light") {
+      button.innerHTML =
+        '<i style="margin: 0 var(--xs-px); font-size: 1.4rem;" class="fa-solid fa-sun"></i>';
+    } else if (theme == "dark") {
+      button.innerHTML =
+        '<i style="margin: 0 var(--xs-px); font-size: 1.4rem;" class="fa-solid fa-moon"></i>';
+    }
+  }
+
   function switchTheme() {
     const html = document.documentElement;
-    const button = document.getElementById("themeToggleButton");
 
     // Toggle button logic
     if (html.classList.contains("dark")) {
       html.className = "light";
-      button.innerHTML = "Theme: Light";
+      switchButtonIcon("dark");
       localStorage.setItem("theme", "light");
     } else {
       html.className = "dark";
-      button.innerHTML = "Theme: Dark";
+      switchButtonIcon("light");
       localStorage.setItem("theme", "dark");
     }
   }
@@ -22,71 +32,77 @@
 
 <style>
   footer {
-    background: var(--mantle);
-    padding: 16px;
+    background: rgb(var(--crust));
+    padding: var(--m-px);
     flex-shrink: 1;
     text-align: center;
     font-family: var(--body);
-    font-size: 0.75rem;
-    color: var(--surface1);
+    font-size: var(--s-rem);
+    color: rgb(var(--surface1));
   }
 
   footer a {
-    color: var(--surface1);
+    color: rgb(var(--surface1));
   }
 
   #links {
     display: flex;
     justify-content: center;
-    align-items: center;
   }
 
-  #links a {
+  #links div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--s-px);
+  }
+
+  #links div a {
     display: flex;
     justify-content: center;
     align-items: center;
     text-decoration: none;
   }
 
-  #links a i {
-    margin: 0 4px;
-    color: var(--text);
+  #links div a i {
+    margin: 0 var(--xs-px);
+    color: rgb(var(--text));
     font-size: 1.5rem;
   }
 
   #themeToggleButton {
-    margin-left: var(--xs-px);
     padding-left: var(--xs-px);
-    border-left: solid var(--overlay0) var(--border-normal);
-    color: var(--blue);
+    margin-left: var(--xs-px);
+    border-left: solid rgb(var(--overlay0)) var(--border-normal);
     cursor: pointer;
   }
 </style>
 
 <footer>
   <div id="links">
-    <a href="https://github.com/ch3rries" aria-label="GitHub"
-      ><i class="fa-brands fa-github"></i></a
-    >
-    <a href="https://x.com/cherryponee" aria-label="X"
-      ><i class="fa-brands fa-x-twitter"></i></a
-    >
-    <a href="https://reddit.com/u/XSuperOptical" aria-label="reddit"
-      ><i class="fa-brands fa-reddit-alien"></i></a
-    >
-    <a id="themeToggleButton" onclick="switchTheme()">Theme: NaN</a>
+    <div>
+      <a href="https://github.com/ch3rries" aria-label="GitHub"
+        ><i class="fa-brands fa-github"></i></a
+      >
+      <a href="https://x.com/cherryponee" aria-label="X"
+        ><i class="fa-brands fa-x-twitter"></i></a
+      >
+      <a href="https://reddit.com/u/XSuperOptical" aria-label="reddit"
+        ><i class="fa-brands fa-reddit-alien"></i></a
+      >
+      <a id="themeToggleButton" onclick="switchTheme()"
+        ><i class="fa-regular fa-no"></i></a
+      >
+    </div>
   </div>
   <p style="margin-top: 8px;">
-    Noah Hancock, 2024 - Powered by <a
-      href="https://github.com/catppuccin/catppuccin">Catppuccin</a
-    >
+    Noah Hancock, 2024 - <span style="font-family: var(--mono);">v7.1.0</span>
   </p>
 </footer>
 
 <script is:inline>
   const html = document.documentElement;
   const currentTheme = localStorage.getItem("theme");
-  const button = document.getElementById("themeToggleButton");
 
   // No theme, add default
   if (!html.classList.contains("light", "dark")) {
@@ -97,9 +113,9 @@
   // Theme from localStorage
   if (currentTheme == "dark") {
     html.className = "dark";
-    button.innerHTML = "Theme: Dark";
+    switchButtonIcon("light");
   } else {
     html.className = "light";
-    button.innerHTML = "Theme: Light";
+    switchButtonIcon("dark");
   }
 </script>
