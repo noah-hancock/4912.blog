@@ -1,9 +1,13 @@
 ---
 const { frontmatter } = Astro.props;
 import Default from "@layouts/Default.astro";
+import Meta from "@components/Meta.astro";
 ---
 
-<Default pageTitle={frontmatter.title}>
-  <h1>{frontmatter.title}</h1>
-  <slot />
-</Default>
+<!-- Add images to this later -->
+<Meta title={frontmatter.title} desc={frontmatter.desc}>
+  <Default pageTitle={frontmatter.title}>
+    <h1>{frontmatter.title}</h1>
+    <slot />
+  </Default>
+</Meta>
