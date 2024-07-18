@@ -117,7 +117,7 @@
 }
 
 body {
-  background: rgb(var(--base));
+  background: rgb(var(--mantle));
   position: relative;
 }
 
@@ -191,4 +191,11 @@ article img {
 
 * {
   /* background: rgba(255, 0, 0, 0.1); */
+}
+
+/* Reusable classes */
+
+.blurry {
+  background: rgba(var(--base), 0.4);
+  backdrop-filter: blur(20px);
 }

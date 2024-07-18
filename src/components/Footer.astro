@@ -1,6 +1,5 @@
 ---
 // INFO: This file contains the Footer component.
-//UPDATE: SIZING AND COLORS
 ---
 
 <script is:inline>
@@ -33,17 +32,17 @@
 
 <style>
   footer {
-    background: var(--mantle);
+    background: rgb(var(--crust));
     padding: var(--m-px);
     flex-shrink: 1;
     text-align: center;
     font-family: var(--body);
     font-size: var(--s-rem);
-    color: var(--surface1);
+    color: rgb(var(--surface1));
   }
 
   footer a {
-    color: var(--surface1);
+    color: rgb(var(--surface1));
   }
 
   #links {
@@ -55,9 +54,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: var(--b-px);
     padding: var(--s-px);
-    box-shadow: 0 0 16px rgb(76, 79, 105, 0.4);
   }
 
   #links div a {
@@ -69,13 +66,14 @@
 
   #links div a i {
     margin: 0 var(--xs-px);
-    color: var(--text);
+    color: rgb(var(--text));
     font-size: 1.5rem;
   }
 
   #themeToggleButton {
     padding-left: var(--xs-px);
-    border-left: solid var(--overlay0) var(--border-normal);
+    margin-left: var(--xs-px);
+    border-left: solid rgb(var(--overlay0)) var(--border-normal);
     cursor: pointer;
   }
 </style>
@@ -98,9 +96,7 @@
     </div>
   </div>
   <p style="margin-top: 8px;">
-    Noah Hancock, 2024 - Powered by <a
-      href="https://github.com/catppuccin/catppuccin">Catppuccin</a
-    >
+    Noah Hancock, 2024 - <span style="font-family: var(--mono);">v7.1.0</span>
   </p>
 </footer>
 

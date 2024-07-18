@@ -12,8 +12,6 @@ const blogName = "4912";
     z-index: 1000;
     position: fixed;
     padding: var(--xs-px);
-    background: rgba(var(--crust), 0.6);
-    backdrop-filter: blur(20px) saturate(180%);
     border-bottom: var(--border-normal) solid rgba(var(--overlay0), 0.4);
     display: flex;
     justify-content: center;
@@ -56,11 +54,17 @@ const blogName = "4912";
 </style>
 
 <title>{pageTitle} - {blogName}</title>
-<wrapper>
+<wrapper class="blurry">
   <nav>
     <div id="name">
       <a href="/">{blogName}</a>
     </div>
-    <div id="dropdown"><a><i class="fa-solid fa-chevron-down"></i></a></div>
+    <!--TEMPORARY -->
+    <a
+      href="/about"
+      style="color: rgb(var(--blue)); font-family: var(--body); text-decoration: none;"
+      >About Me</a
+    >
+    <!--<div id="dropdown"><a><i class="fa-solid fa-chevron-down"></i></a></div>-->
   </nav>
 </wrapper>

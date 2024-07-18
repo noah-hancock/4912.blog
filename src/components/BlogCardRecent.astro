@@ -1,7 +1,6 @@
 ---
 // INFO: This file contains the recent blogs card component (found on homepage).
 const { title, desc, date, author, tags, url } = Astro.props;
-//UPDATE: SIZING AND COLORS
 ---
 
 <style>
@@ -27,7 +26,7 @@ const { title, desc, date, author, tags, url } = Astro.props;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: var(--surface0);
+    background: rgb(var(--surface0));
     border-radius: 6px;
     cursor: pointer;
     min-height: 48px;
@@ -35,12 +34,12 @@ const { title, desc, date, author, tags, url } = Astro.props;
   }
 
   a:hover {
-    background: var(--surface1);
+    background: rgb(var(--surface2));
   }
 
   #date {
     font-family: var(--heading);
-    color: var(--text);
+    color: rgb(var(--text));
     float: right;
   }
 </style>
